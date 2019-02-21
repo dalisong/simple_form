@@ -50,7 +50,7 @@ module SimpleForm
       def render_component(builder)
         label_class = "#{@options[:item_label_class]} collection_radio_buttons".strip
 
-        builder.radio_button + builder.label(class: label_class)
+        builder.radio_button + builder.label(class: label_class).gsub("<label","<span").gsub("label>","span>").html_safe
       end
     end
 
