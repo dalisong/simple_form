@@ -66,7 +66,7 @@ module SimpleForm
       def render_component(builder)
         label_class = "#{@options[:item_label_class]} collection_check_boxes".strip
 
-       builder.check_box + builder.label(class: label_class).gsub("label","span")
+       builder.check_box + builder.label(class: label_class).gsub("label","span").html_safe
       end
     end
   end
